@@ -1,0 +1,9 @@
+/*
+	Ethereal by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+*/
+/* Page */
+body {
+  overflow-x: scroll;
+}
