@@ -1,3 +1,6 @@
+{{- $mainCss := resources.Get "sass/main.scss" | resources.ToCSS (dict "targetPath" "assets/css/main.css" "outputStyle" "compressed") -}}
+{{- $noScriptCss := resources.Get "sass/noscript.scss" | resources.ToCSS (dict "targetPath" "assets/css/noscript.css" "outputStyle" "compressed") -}}
+
 <!DOCTYPE HTML>
 <!--
 	Ethereal by Pixelarity
@@ -9,8 +12,8 @@
 		<title>Untitled</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="/assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="{{ $mainCss.RelPermalink }}" />
+		<noscript><link rel="stylesheet" href="{{ $noScriptCss.RelPermalink }}" /></noscript>
 	</head>
 	<body>
 
