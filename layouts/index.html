@@ -1,4 +1,5 @@
 {{- $googleFontsCss := resources.Get "sass/google-fonts.scss" | resources.ToCSS (dict "targetPath" "assets/css/google-fonts.css" "outputStyle" "compressed") -}}
+{{- $fontAwesomeCss := resources.Get "sass/font-awesome.css" | resources.ToCSS (dict "targetPath" "assets/css/font-awesome.css" "outputStyle" "compressed") -}}
 {{- $mainCss := resources.Get "sass/main.scss" | resources.ToCSS (dict "targetPath" "assets/css/main.css" "outputStyle" "compressed") -}}
 {{- $noScriptCss := resources.Get "sass/noscript.scss" | resources.ToCSS (dict "targetPath" "assets/css/noscript.css" "outputStyle" "compressed") -}}
 
@@ -14,6 +15,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{{ $googleFontsCss.RelPermalink }}" />
+		<link rel="stylesheet" href="{{ $fontAwesomeCss.RelPermalink }}" />
 		<link rel="stylesheet" href="{{ $mainCss.RelPermalink }}" />
 		<noscript><link rel="stylesheet" href="{{ $noScriptCss.RelPermalink }}" /></noscript>
 	</head>
