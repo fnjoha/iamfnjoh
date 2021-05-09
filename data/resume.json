@@ -1,0 +1,321 @@
+{
+  "basics": {
+    "name": "",
+    "label": "",
+    "picture": "",
+    "email": "",
+    "phone": "",
+    "website": "",
+    "summary": "",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "",
+      "region": "",
+      "additional": ""
+    },
+    "profiles": [
+      {
+        "network": "",
+        "username": "",
+        "url": "",
+        "icon": ""
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Kaplan Test Prep",
+      "position": "Web Producer",
+      "location": "New York, NY",
+      "website": "https://www.kaptest.com",
+      "startDate": "2012-07-01",
+      "endDate": "2014-04-01",
+      "summary": "",
+      "responsibilities": [
+        "Managed content through the e-commerce website",
+        "Executed web campaigns in partnership with business units as part of a national marketing team",
+        "Suggested and created A/B and multivariate experiments to gain insights on increasing conversions and overall revenue",
+        "Built and maintained community blogs, Facebook pages and other web properties"
+      ],
+      "achievements": [
+        "Played a key role in overall content migration during a Website Redesign"
+      ],
+      "technologies": [
+        "HTML/CSS",
+        "JavaScript",
+        "jQuery",
+        "Alfresco CMS",
+        "Jira",
+        "Google Analytics",
+        "WordPress",
+        "Adobe Photoshop",
+        "Salesforce"
+      ]
+    },
+    {
+      "company": "Kaplan Test Prep",
+      "position": "Manager, Web Production / Front End Development",
+      "location": "New York, NY",
+      "website": "https://www.kaptest.com",
+      "startDate": "2014-04-01",
+      "endDate": "2014-12-01",
+      "summary": "",
+      "responsibilities": [
+        "Managed a team of web producers as part of a national marketing team",
+        "Utilized web analytics to measure performance and recommend iterative improvements",
+        "Collaborated with cross-functional teams consisting of graphic designers, traffic coordinators, project managers, and engineers",
+        "Participated in the technical team's daily scrums and biweekly sprint planning meetings, ensuring the marketing team's project requests were prioritized and advancing accordingly"
+      ],
+      "achievements": [
+        "Promoted for becoming team lead and demonstrating leadership skills",
+        "Headed efforts to migrate the marketing project development and delivery process to Agile Kanban methodology"
+      ],
+      "technologies": [
+        "HTML/CSS",
+        "JavaScript",
+        "jQuery",
+        "Alfresco CMS",
+        "Jira",
+        "Google Analytics",
+        "WordPress",
+        "Adobe Photoshop",
+        "Salesforce"
+      ]
+    },
+    {
+      "company": "ScrollMotion",
+      "position": "Associate Front End Developer",
+      "location": "New York, NY",
+      "website": "https://www.scrollmotion.com",
+      "startDate": "2015-01-01",
+      "endDate": "2015-09-01",
+      "summary": "",
+      "responsibilities": [
+        "Implemented application features, both consumer-facing and product-based, using HTML, JavaScript, JSON, and the enterprise platform",
+        "Ensured the delivery of a rich user experience and provided quality control of app as it relates to technical formatting, layout, style, and coding",
+        "Interfaced with internal cross-functional teams consisting of engineers, designers, and project managers",
+        "Changed gears quickly, saw the big picture, and moved at a startup pace"
+      ],
+      "achievements": [
+      ],
+      "technologies": [
+        "HTML/CSS",
+        "JavaScript",
+        "JSON",
+        "Git",
+        "JSON",
+        "APIs",
+        "Contentful"
+      ]
+    },
+    {
+      "company": "WIRED",
+      "position": "Front End Engineer",
+      "location": "New York, NY",
+      "website": "https://www.wired.com",
+      "startDate": "2015-09-01",
+      "endDate": "2016-09-01",
+      "summary": "",
+      "responsibilities": [
+        "Developed landing pages, microsites, ad units, and other creative ad product solutions for marketing partners tailored to WIRED.com readers",
+        "Created beautiful, effective digital experiences utilizing an in-house static site generator",
+        "Interacted on a daily basis with cross-functional teams of engineers, graphic designers, project managers, and marketing directors"
+      ],
+      "achievements": [
+        "Functioned as a key member of the *WIRED Brand Lab*, consisting of marketing, design, and technology teams that build and activate advertising programs on a project basis",
+        "Collaborated with *Getty Images*, *Qualcomm*, *Victorinox*, *LensCrafters*, *Porsche*, and *Netflix* brands to build high-quality single-page and ad product experiences",
+        "Participated in the annual Cond&eacute; Nast Hackathon&mdash;a member of a 9-person team&mdash;placing 3rd place overall out of 23 teams"
+      ],
+      "technologies": [
+        "HTML/CSS",
+        "JavaScript",
+        "jQuery",
+        "Jade",
+        "Git",
+        "Roots",
+        "Slack"
+      ]
+    },
+    {
+      "company": "CAM Creation Labs",
+      "position": "Web Technical Specialist",
+      "location": "Remote",
+      "website": "https://camcreationlabs.com",
+      "startDate": "2017-02-01",
+      "endDate": "2019-05-06",
+      "summary": "",
+      "responsibilities": [
+        "Built marketing funnel pages for chiropractors & podiatrists to increase overall revenue",
+        "Set up necessary data imports and notifications with automation tools and web services",
+        "Provided technical support and resolve challenges and issues to clientele"
+      ],
+      "responsibilities_extra": [
+        "Attracted high-quality patient leads for clients with Google & Facebook advertising"
+      ],
+      "achievements": [
+        "Devised customizable prototypes and interactive demos for securing prospective clients",
+        "Boosted deployment of new clients’ campaigns by templatizing funnel pages in internal CMS",
+        "Developed custom Lambda functions to validate select data points in incoming lead form submissions (email address & phone number validation APIs)"
+      ],
+      "technologies": [
+        "HTML/CSS",
+        "SASS",
+        "Markdown",
+        "TOML",
+        "JavaScript",
+        "jQuery",
+        "Git",
+        "Node.js",
+        "Gulp",
+        "JSON",
+        "APIs",
+        "Hugo",
+        "Netlify",
+        "Slack"
+      ]
+    },
+    {
+      "company": "Ogury",
+      "position": "Technical Support Engineer",
+      "location": "New York, NY",
+      "website": "https://www.ogury.com/",
+      "startDate": "2019-05-06",
+      "endDate": "",
+      "summary1": "Technical Support Engineer responsible for service requests levels 1, 2 and 3, escalations and communicating with all internal teams.",
+      "responsibilities": [
+        "Supporting business and operation teams with technical tasks, investigating and solving their issues, and providing additional help where needed",
+        "Communicating with development team and escalating issues as appropriate",
+        "Testing and troubleshooting the platform, applications, and services",
+        "Explaining specific behaviors and building custom reports by investigating and exploring data",
+        "Contributing process and technical documentation to the knowledge base"
+      ],
+      "achievements": [
+        "Ramped up quickly, learning the ecosystem and necessary tools & services to carry out tasks",
+        "Wrote shell and SQL scripts to aid in specific processes that were performed manually, enabling the team to complete tasks more faster, easier, and efficiently",
+        "Utilized front end knowledge to integrate and troubleshoot ad formats more effectively"
+      ],
+      "technologies": [
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "",
+      "position": "",
+      "website": "",
+      "startDate": "",
+      "endDate": "",
+      "summary": "",
+      "highlights": [
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Rutgers University",
+      "location": "New Brunswick, NJ",
+      "website": "https://www.rutgers.edu/",
+      "area": "Computer Science",
+      "studyType": "Bachelor of Arts",
+      "startDate": "",
+      "endDate": "",
+      "gpa": "",
+      "courses": [
+      ]
+    },
+    {
+      "institution": "General Assembly",
+      "location": "New York, NY",
+      "website": "https://generalassemb.ly/",
+      "area": "Back End Web Development",
+      "studyType": "Certificate",
+      "startDate": "",
+      "endDate": "2014-01-31",
+      "summary": [
+        "Course: BEWD-NYC-5<br>Instructor: Steven Nu&ntilde;ez",
+        "Developed a web application using Ruby on Rails, MVC framework, routers, ActiveRecord, SQLite, forms, Ruby gems, user profiles, authentication, APIs, Foundation, and deployed to Heroku.",
+        "Source code: https&colon;//github.com/christianmendoza/moneyable"
+      ],
+      "gpa": "",
+      "courses": [
+      ]
+    },
+    {
+      "institution": "Coursera",
+      "location": "Online",
+      "website": "https://www.coursera.org/",
+      "area": "Introduction to Big Data",
+      "studyType": "Certificate",
+      "startDate": "",
+      "endDate": "2020-07-31",
+      "summary": [
+        "",
+        "",
+        ""
+      ],
+      "gpa": "",
+      "courses": [
+      ],
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/certificate/HFGJRDNF9DDG"
+    },
+    {
+      "institution": "Codecademy",
+      "location": "Online",
+      "website": "https://www.rutgers.edu/",
+      "area": "Learn React, Learn Python",
+      "studyType": "Certificates",
+      "startDate": "",
+      "endDate": "2021-05-31",
+      "gpa": "",
+      "courses": [
+      ],
+      "credentialUrl": ""
+    }
+  ],
+  "awards": [
+    {
+      "title": "",
+      "date": "",
+      "awarder": "",
+      "summary": ""
+    }
+  ],
+  "publications": [
+    {
+      "name": "",
+      "publisher": "",
+      "releaseDate": "",
+      "website": "",
+      "summary": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "",
+      "keywords": [
+      ],
+      "area": ""
+    }
+  ],
+  "languages": [
+    {
+      "language": "",
+      "fluency": ""
+    }
+  ],
+  "interests": [
+    {
+      "name": "",
+      "keywords": [
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "",
+      "reference": ""
+    }
+  ]
+}

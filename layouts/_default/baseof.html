@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<!--
+  Ethereal by Pixelarity
+  pixelarity.com | hello@pixelarity.com
+  License: pixelarity.com/license
+-->
+<html>
+  <head>
+    {{ partial "head" . }}
+  </head>
+  <body>
+    <div id="page-wrapper">
+      <div id="wrapper">
+        {{ block "main" . }}{{ end }}
+        <div class="copyright">{{ .Site.Copyright | markdownify }}</div>
+      </div>
+    </div>
+    {{ partial "scripts" . }}
+  </body>
+</html>
