@@ -1,0 +1,14 @@
+{{ $content := $.Site.Data.content.panel.intro }}
+
+<section class="panel banner right">
+  <div class="content color0 span-4">
+    <h1 class="major">{{ $content.title }}</h1>
+    <p>{{ .Site.Params.description | markdownify }}</p>
+    <ul class="actions">
+      <li><a href="#about" class="button special color1 circle icon fa-angle-right">Next</a></li>
+    </ul>
+  </div>
+  <div class="image filtered span-2-5" data-position="{{ $content.image.position }}">
+    <img src="{{ $content.image.src }}" alt="{{ .Site.Params.name }}" />
+  </div>
+</section>

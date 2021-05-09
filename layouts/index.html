@@ -1,11 +1,10 @@
 {{ define "main" }}
 
-	{{ partial "panels/panel-1" . }}
-  {{ partial "panels/panel-2" . }}
-  {{ partial "panels/panel-3" . }}
-  {{ partial "panels/panel-4" . }}
-  {{ partial "panels/panel-5" . }}
-  {{ partial "panels/panel-6" . }}
-  {{ partial "panels/elements" . }}
+	{{ .Render "panels/intro" }}
+  {{ .Render "panels/about" }}
+  {{ .Render "panels/interests" }}
+  {{ .Render "panels/experiences" }}
+  {{ .Render "panels/contact" }}
+  <!-- {{ .Render "panels/elements" }} -->
 
 {{ end }}

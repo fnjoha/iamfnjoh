@@ -1,0 +1,83 @@
+# INTRO
+[panel.intro]
+  title = "Christian Mendoza"
+  text = ""
+  [panel.intro.image]
+    src = "/assets/images/mykonos.jpg"
+    position = "center"
+
+# ABOUT
+[panel.about]
+  title = "About"
+  text = "Growing up with a deep interest in computers, technology, and the web gave Christian the drive to study computer science and apply his programming skills and knowledge to website creation. An array of work experiences and roles carved his path and ultimately led him to pursue a career as a technical support engineer. Currently Christian enjoys building small personal websites and hacking together tools to increase productivity."
+  [panel.about.image]
+    src = "/assets/images/museum-of-the-moving-image.jpg"
+    position = "right"
+
+# INTERESTS
+[panel.interests]
+  title = "A little bit more&hellip;"
+  characteristics = [
+    "Results producer",
+    "Web coder",
+    "Passionate wanderer",
+    "Avid photographer",
+    "Deep thoughts thinker",
+    "Erratic activity organizer",
+    "Rubik's cube solver",
+    "Snowboarding tricks pretender"
+  ]
+
+  [[panel.interests.icons]]
+    text = "Thinker"
+    icon = "fa-lightbulb-o"
+
+  [[panel.interests.icons]]
+    text = "Organizer"
+    icon = "fa-cogs"
+
+  [[panel.interests.icons]]
+    text = "Coder"
+    icon = "fa-code"
+
+  [[panel.interests.icons]]
+    text = "Wanderer"
+    icon = "fa-laptop"
+
+  [[panel.interests.icons]]
+    text = "Traveler"
+    icon = "fa-plane"
+
+  [[panel.interests.icons]]
+    text = "Photographer"
+    icon = "fa-camera-retro"
+
+# EXPERIENCES
+[panel.experiences]
+  title = "Experiences"
+  separator = "&nbsp;&bull;&nbsp;"
+  [panel.experiences.image]
+    src = "/assets/images/malibu.jpg"
+    position = "right"
+
+# CONTACT
+[panel.contact]
+  title = "Get in touch"
+  text = "If you have any questions, please feel free to drop a line."
+  buttonLabel = "Send Message"
+
+# SOCIAL
+[[social]]
+  label = "linkedin.com/in/christianmendoza"
+  icon = "fa-linkedin"
+  url = "https://linkedin.com/in/christianmendoza"
+
+[[social]]
+  label = "github.com/christianmendoza"
+  icon = "fa-github"
+  url = "https://github.com/christianmendoza"
+
+[[social]]
+  label = "&#99;h&#114;is&#116;ia&#110;&#64;iam&#99;hristia&#110;&#46;me"
+  icon = "fa-envelope"
+  url = "m&#97;ilto&#58;%&#54;&#51;h&#114;&#105;&#37;73%74&#105;an%40&#37;69&#97;mc%&#54;8&#114;&#37;&#54;9&#115;&#116;%69an&#46;m%6&#53;"

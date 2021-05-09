@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+	{{ $content := $.Site.Data.content.panel.intro }}
+
+  <section class="panel banner right">
+    <div class="content color0 span-3-5">
+      <h1 class="major">404: Page Not Found</h1>
+      <p>{{ "Sorry, that page can't be found." | markdownify }}</p>
+      <ul class="actions">
+        <li><a href="{{ .Site.BaseURL }}" class="button special color1 circle icon fa-angle-right">Next</a></li>
+      </ul>
+    </div>
+    <div class="image filtered span-2-5" data-position="{{ $content.image.position }}">
+      <img src="{{ $content.image.src }}" alt="{{ $content.image.alt }}" />
+    </div>
+  </section>
+
+{{ end }}

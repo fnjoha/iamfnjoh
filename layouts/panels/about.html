@@ -1,0 +1,11 @@
+{{ $content := $.Site.Data.content.panel.about }}
+
+<section class="panel spotlight medium left" id="about">
+  <div class="content span-7-5">
+    <h2 class="major">{{ $content.title }}</h2>
+    <p>{{ $content.text | markdownify }}</p>
+  </div>
+  <div class="image filtered tinted" data-position="{{ $content.image.position }}">
+    <img src="{{ $content.image.src }}" alt="{{ .Site.Params.name }}" />
+  </div>
+</section>

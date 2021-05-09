@@ -1,12 +1,46 @@
-{{- $googleFontsCss := resources.Get "sass/google-fonts.scss" | resources.ToCSS (dict "targetPath" "assets/css/google-fonts.css" "outputStyle" "compressed") -}}
-{{- $fontAwesomeCss := resources.Get "sass/font-awesome.css" | resources.ToCSS (dict "targetPath" "assets/css/font-awesome.css" "outputStyle" "compressed") -}}
-{{- $mainCss := resources.Get "sass/main.scss" | resources.ToCSS (dict "targetPath" "assets/css/main.css" "outputStyle" "compressed") -}}
-{{- $noScriptCss := resources.Get "sass/noscript.scss" | resources.ToCSS (dict "targetPath" "assets/css/noscript.css" "outputStyle" "compressed") -}}
-
-<title>Untitled</title>
 <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="{{ $googleFontsCss.RelPermalink }}" />
-<link rel="stylesheet" href="{{ $fontAwesomeCss.RelPermalink }}" />
-<link rel="stylesheet" href="{{ $mainCss.RelPermalink }}" />
-<noscript><link rel="stylesheet" href="{{ $noScriptCss.RelPermalink }}" /></noscript>
+<meta name="robots" content="noindex, nofollow" />
+
+{{ if .IsHome }}
+  {{ with .Site.Params.name }}<meta name="author" content="{{ . }}" />{{ end }}
+  {{ with .Site.Params.description }}<meta name="description" content="{{ . }}" />{{ end }}
+
+  <meta property="og:locale" content="en_US" />
+  {{ with .Site.Params.name }}<meta property="og:site_name" content="{{ . }}" />{{ end }}
+  {{ with .Site.Title }}<meta property="og:title" content="{{ . }}" />{{ end }}
+  {{ with .Site.Params.description }}<meta property="og:description" content="{{ . }}" />{{ end }}
+  <meta property="og:url" content="{{ .Site.BaseURL }}" />
+  <meta property="og:type" content="website" />
+  {{ with .Site.Params.socialImage }}<meta property="og:image" content="{{ . | absURL }}" />
+  <meta name="twitter:card" content="summary_large_image" />{{ end }}
+  {{ with .Site.Params.twitter }}<meta name="twitter:site" content="@{{ . }}" />{{ end }}
+{{ end }}
+
+<title>{{ .Title }}</title>
+
+<link href="{{ .Site.BaseURL }}" rel="canonical" />
+
+{{ partial "styles" . }}
+
+{{ if .IsHome }}
+  <script type="application/ld+json">
+    {
+      "@context": "http://www.schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "{{ .Site.Params.name }}",
+          "url": "{{ .Site.BaseURL }}"
+        },
+        {
+          "@type": "Person",
+          "name": "{{ .Site.Params.name }}",
+          "url": "{{ .Site.BaseURL }}",
+          "sameAs": [{{ range $index, $item := first 2 $.Site.Data.content.social }}{{ if $index }},{{ end }}"{{ .url }}"{{ end }}]
+        }
+      ]
+    }
+  </script>
+{{ end }}

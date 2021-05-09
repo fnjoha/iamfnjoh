@@ -9,25 +9,12 @@
     {{ partial "head" . }}
   </head>
   <body>
-
-      <!-- page wrapper -->
-      <div id="page-wrapper">
-
-          <!-- wrapper -->
-          <div id="wrapper">
-
-            <!-- main content -->
-            {{ block "main" . }}{{ end }}
-
-            <!-- copyright -->
-            <div class="copyright">&copy; Untitled.</div>
-
-          </div>
-
+    <div id="page-wrapper">
+      <div id="wrapper">
+        {{ block "main" . }}{{ end }}
+        <div class="copyright">{{ .Site.Copyright | markdownify }}</div>
       </div>
-
-    <!-- scripts -->
+    </div>
     {{ partial "scripts" . }}
-
   </body>
 </html>

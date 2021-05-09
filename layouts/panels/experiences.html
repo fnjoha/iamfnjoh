@@ -1,0 +1,27 @@
+{{ $content := $.Site.Data.content.panel.experiences }}
+{{ $resume := $.Site.Data.resume }}
+{{ $dateformat := "Jan 2006" }}
+
+<section class="panel spotlight large">
+  <div class="inner columns divided">
+    <div class="span-4">
+      <h2 class="major">{{ $content.title }}</h2>
+      <h3>Work</h3>
+      {{ $data := (sort $resume.work "startDate" "desc") }}
+      {{ range first 3 $data }}
+        <p><strong>{{ .position }} {{ $content.separator | markdownify }} {{ dateFormat $dateformat .startDate }} &ndash; {{ if .endDate }}{{ dateFormat $dateformat .endDate }}{{ else }}Present{{ end }}</strong><br><em>{{ .company }}</em> {{ $content.separator | markdownify }} {{ .location }}</p>
+      {{ end }}
+    </div>
+
+    <div class="span-4">
+      <h3>Education</h3>
+      {{ $data := (sort $resume.education "endDate" "desc") }}
+      {{ range $data }}
+        <p><strong>{{ .studyType }} in {{ .area }}</strong><br><em>{{ .institution }}</em> {{ $content.separator | markdownify }} {{ .location }}{{ with .credentialUrl }} {{ $content.separator | markdownify }} <a href="{{ . }}" target="_blank">(see credential)</a>{{ end }}</p>
+      {{ end }}
+    </div>
+  </div>
+  <div class="image filtered tinted" data-position="{{ $content.image.position }}">
+    <img src="{{ $content.image.src }}" alt="{{ .Site.Params.name }}" />
+  </div>
+</section>
