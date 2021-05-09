@@ -1,0 +1,30 @@
+[build]
+  publish = "public"
+  command = "hugo --minify"
+
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.82.0"
+
+[context.branch-deploy.environment]
+  HUGO_VERSION = "0.82.0"
+
+[context.production.environment]
+  HUGO_VERSION = "0.82.0"
+
+[build.processing]
+  skip_processing = false
+[build.processing.css]
+  bundle = true
+  minify = true
+[build.processing.js]
+  bundle = true
+  minify = true
+[build.processing.html]
+  pretty_urls = false
+[build.processing.images]
+  compress = true
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Content-Type = "text/html; charset=UTF-8"
