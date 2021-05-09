@@ -65,6 +65,7 @@
   title = "Get in touch"
   text = "If you have any questions, please feel free to drop a line."
   buttonLabel = "Send Message"
+  honeypot = "bot-field"
 
 # SOCIAL
 [[social]]
