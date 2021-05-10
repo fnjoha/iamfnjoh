@@ -24,6 +24,10 @@
 
 {{ partial "styles" . }}
 
+{{ if eq hugo.Environment "production" }}
+  {{ partial "google-global-site-tag" . }}
+{{ end }}
+
 {{ if .IsHome }}
   <script type="application/ld+json">
     {

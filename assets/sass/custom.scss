@@ -1,0 +1,29 @@
+// Colors.
+$green: #62bd83;
+$red: #f56a6a;
+
+// Form.
+form {
+  input, li {
+    &.is-hidden {
+      display: none;
+    }
+  }
+}
+
+#contact-form {
+  .form-group {
+    &.has-danger {
+      input, textarea {
+        border-color: $red;
+      }
+      .text-help {
+        color: $red;
+      }
+    }
+  }
+
+  li.valid {
+    color: $green;
+  }
+}
