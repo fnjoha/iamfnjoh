@@ -24,7 +24,7 @@
 
 {{ partial "styles" . }}
 
-{{ if eq hugo.Environment "production" }}
+{{ if not .Site.IsServer }}
   {{ partial "google-global-site-tag" . }}
 {{ end }}
 
@@ -42,7 +42,7 @@
           "@type": "Person",
           "name": "{{ .Site.Params.name }}",
           "url": "{{ .Site.BaseURL }}",
-          "sameAs": [{{ range $index, $item := first 2 $.Site.Data.content.social }}{{ if $index }},{{ end }}"{{ .url }}"{{ end }}]
+          "sameAs": [{{ range $index, $item := $.Site.Data.content.social }}{{ if $index }},{{ end }}"{{ .url }}"{{ end }}]
         }
       ]
     }
