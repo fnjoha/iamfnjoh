@@ -1,0 +1,38 @@
+<section class="mt-8 first:mt-0">
+
+  {{ $data := (sort $.Site.Data.resume.education "endDate" "desc") }}
+
+  <!-- To keep in the same column -->
+  <div class="break-inside-avoid">
+    <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal text-uppercase">Education</h2>
+
+    {{ range first 1 $data }}
+
+      <section class="mb-4.5 break-inside-avoid">
+        <header>
+          <h3 class="text-lg font-semibold text-gray-700 leading-snugish">{{ .institution }}</h3>
+          <p class="leading-normal text-md text-gray-650">{{ .studyType }}{{ with .area }} in {{ . }}{{ end }} &nbsp;&bull;&nbsp; {{ .location }}</p>
+        </header>
+        <!-- {{ if .courses }}
+          {{ $len := len .courses }}
+          {{ $last := sub $len 1 }}
+            <p class="leading-normal text-sm2 text-gray-650">
+              {{ range $index, $item := .courses }}{{ if $index }}, {{ end }}{{ if eq $index $last }}and {{ end }}{{ printf "(%d) %s" (add $index 1) $item }}{{ end }}
+            </p>
+        {{ end }} -->
+      </section>
+
+    {{ end }}
+  </div>
+
+  {{ range after 1 $data }}
+
+    <section class="mb-4.5 break-inside-avoid">
+      <header>
+        <h3 class="text-lg font-semibold text-gray-700 leading-snugish">{{ .institution }}</h3>
+        <p class="leading-normal text-md text-gray-650">{{ .studyType }}{{ with .area }} in {{ . }}{{ end }} &nbsp;&bull;&nbsp; {{ .location }}</p>
+      </header>
+    </section>
+
+  {{ end }}
+</section>

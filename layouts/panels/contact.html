@@ -44,6 +44,11 @@
           {{ range $social }}
             <li class="icon {{ .icon }}"><a href="{{ htmlUnescape .url }}">{{ htmlUnescape .label }}</a></li>
           {{ end }}
+
+          {{ with $.Site.Data.resume.basics.email }}
+            {{ $email := split $.Site.Data.resume.basics.email "/" }}
+            <li class="icon fa-envelope"><a data-user="{{ index $email 2 }}" data-domain="{{ index $email 0 }}" data-tld="{{ index $email 1 }}" href="javascript:void(0);" class="cryptedmail" onclick="window.location.href = 'mailto:' + this.dataset.user + '@' + this.dataset.domain + '.' + this.dataset.tld"></a></li>
+          {{ end }}
         </ul>
       {{ end }}
     </div>

@@ -1,0 +1,23 @@
+{{ $.Scratch.Set "dateformat" "Jan 2006" }}
+<!doctype html>
+<html>
+  <head>
+    {{ partial "resume/_head" . }}
+  </head>
+  <body>
+    <main class="font-firago hyphens-manual">
+      <div class="p-6 mx-auto page max-w-2xl print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 bg-white">
+        {{ partial "resume/name" . }}
+        <div class="md:col-count-2 print:col-count-2 col-gap-md md:h-letter-col print:h-letter-col ">
+          <!-- {{ partial "resume/about" . }} -->
+          {{ partial "resume/experiences" . }}
+          {{ partial "resume/education" . }}
+          <!-- {{ partial "resume/projects" . }} -->
+          <!-- {{ partial "resume/skills" . }} -->
+          {{ partial "resume/contact" . }}
+          {{ partial "resume/credit" . }}
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

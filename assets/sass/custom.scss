@@ -27,3 +27,21 @@ form {
     color: $green;
   }
 }
+
+// Email.
+.cryptedmail:after {
+  content: attr(data-domain) "." attr(data-tld); 
+}
+
+.cryptedmail:before {
+  content: attr(data-user) "\0040";
+}
+
+// Number.
+.cryptednumber:after {
+  content: attr(data-exchangecode) "-" attr(data-linenumber); 
+}
+
+.cryptednumber:before {
+  content: attr(data-areacode) "/";
+}

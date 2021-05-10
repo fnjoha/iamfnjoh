@@ -3,3 +3,16 @@
 
 # Rewrite paths
 /ndoza/ /index.html 200
+
+# Redirect with 301
+/resumepdf        /assets/pdf/christian-mendoza-resume.pdf
+/philippines2018  https://youtu.be/3594028Ox7Q
+/pi2018           https://youtu.be/3594028Ox7Q
+/victorinox       https://projects.christianmendoza.com/wired/victorinox/
+/lenscrafters     https://projects.christianmendoza.com/wired/lenscrafters/
+/porsche          https://projects.christianmendoza.com/wired/porsche/
+/netflix          https://projects.christianmendoza.com/wired/netflix/
+/lenscrafters     https://projects.christianmendoza.com/wired/lenscrafters/
+/qualcomm         https://projects.christianmendoza.com/wired/qualcomm/
+/emails           https://projects.christianmendoza.com/wired/emails/
+/gettyimages      https://projects.christianmendoza.com/wired/getty.mp4

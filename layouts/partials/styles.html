@@ -4,7 +4,7 @@
 {{ $customCss := resources.Get "sass/custom.scss" | toCSS (dict "targetPath" "assets/css/custom.css" "outputStyle" "compressed") }}
 {{ $noScriptCss := resources.Get "sass/noscript.scss" | toCSS (dict "targetPath" "assets/css/noscript.css" "outputStyle" "compressed") }}
 
-{{ if eq hugo.Environment "development" }}
+{{ if .Site.IsServer }}
   <link rel="stylesheet" href="{{ $googleFontsCss.RelPermalink }}" />
   <link rel="stylesheet" href="{{ $fontAwesomeCss.RelPermalink }}" />
   <link rel="stylesheet" href="{{ $mainCss.RelPermalink }}" />

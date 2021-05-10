@@ -5,7 +5,7 @@
 {{ $formvalidation := resources.Get "js/form-validation.js" | resources.Minify }}
 {{ $js := slice $jquery $skel $main $pristine $formvalidation | resources.Concat "assets/js/bundle.js" }}
 
-{{ if eq hugo.Environment "development" }}
+{{ if .Site.IsServer }}
   <script src="{{ $jquery.RelPermalink }}"></script>
   <script src="{{ $skel.RelPermalink }}"></script>
   <script src="{{ $main.RelPermalink }}"></script>

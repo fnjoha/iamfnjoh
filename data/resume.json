@@ -1,11 +1,11 @@
 {
   "basics": {
-    "name": "",
-    "label": "",
-    "picture": "",
-    "email": "",
-    "phone": "",
-    "website": "",
+    "name": "Christian Mendoza",
+    "label": "Technical Support Engineer",
+    "picture": "/assets/images/christian-headshot.jpg",
+    "email": "iamchristian/me/christian",
+    "phone": "535/8132/646",
+    "website": "https://iamchristian.me",
     "summary": "",
     "location": {
       "address": "",
@@ -17,10 +17,22 @@
     },
     "profiles": [
       {
-        "network": "",
-        "username": "",
-        "url": "",
-        "icon": ""
+        "network": "LinkedIn",
+        "username": "linkedin.com/in/christianmendoza",
+        "url": "https://linkedin.com/in/christianmendoza",
+        "icon": "fa-linkedin"
+      },
+      {
+        "network": "GitHub",
+        "username": "github.com/christianmendoza",
+        "url": "https://github.com/christianmendoza",
+        "icon": "fa-github"
+      },
+      {
+        "network": "Website",
+        "username": "iamchristian.me/ndoza",
+        "url": "https://iamchristian.me",
+        "icon": "fa-globe"
       }
     ]
   },
@@ -183,7 +195,7 @@
       "website": "https://www.ogury.com/",
       "startDate": "2019-05-06",
       "endDate": "",
-      "summary1": "Technical Support Engineer responsible for service requests levels 1, 2 and 3, escalations and communicating with all internal teams.",
+      "summary": "Technical Support Engineer responsible for service requests levels 1, 2 and 3, escalations and communicating with all internal teams.",
       "responsibilities": [
         "Supporting business and operation teams with technical tasks, investigating and solving their issues, and providing additional help where needed",
         "Communicating with development team and escalating issues as appropriate",
@@ -259,19 +271,6 @@
       "courses": [
       ],
       "credentialUrl": "https://www.coursera.org/account/accomplishments/certificate/HFGJRDNF9DDG"
-    },
-    {
-      "institution": "Codecademy",
-      "location": "Online",
-      "website": "https://www.rutgers.edu/",
-      "area": "Learn React, Learn Python",
-      "studyType": "Certificates",
-      "startDate": "",
-      "endDate": "2021-05-31",
-      "gpa": "",
-      "courses": [
-      ],
-      "credentialUrl": ""
     }
   ],
   "awards": [
