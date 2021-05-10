@@ -1,6 +1,7 @@
 baseURL = "https://iamchristian.me/"
 languageCode = "en-us"
 title = "Christian Mendoza / Technical Support Engineer"
+googleAnalytics = "UA-82162805-1"
 disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap"]
 copyright = "&copy; Christian Mendoza. Built with [Hugo](//gohugo.io). [[source](//github.com/christianmendoza/iamchristian.me)]"
 enableRobotsTXT = true
