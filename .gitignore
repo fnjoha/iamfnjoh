@@ -3,7 +3,6 @@ Thumbs.db
 db.json
 *.log
 public/
-resources/_gen/
 node_modules/
 npm-debug.log
 .netlify

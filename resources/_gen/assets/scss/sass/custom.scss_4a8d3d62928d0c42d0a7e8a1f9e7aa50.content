@@ -1,0 +1,1 @@
+form input.is-hidden,form li.is-hidden{display:none}#contact-form .form-group.has-danger input,#contact-form .form-group.has-danger textarea{border-color:#f56a6a}#contact-form .form-group.has-danger .text-help{color:#f56a6a}#contact-form li.valid{color:#62bd83}
