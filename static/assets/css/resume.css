@@ -482,3 +482,12 @@ html {
     column-count: 2
   }
 }
+
+/* custom */
+.text-sm3 {
+  font-size: .75rem
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}

@@ -1,22 +1,65 @@
 <section class="mt-8 first:mt-0">
-
   <!-- To keep in the same column -->
   <div class="break-inside-avoid">
-    <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">CONTACT</h2>
+    <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal text-uppercase">Contact</h2>
 
     <section class="mb-4.5 break-inside-avoid">
       <ul class="list-inside pr-7">
-        <li class="mt-1.5 leading-normal text-gray-700 text-md">
-          <a href="//webpraktikos.com" class="group">webpraktikos.com <span class="inline-block text-gray-550 print:text-black font-normal group-hover:text-gray-700 transition duration-100 ease-in">↗</span></a>
-        </li>
-        <li class="mt-1.5 leading-normal text-gray-700 text-md">
-          <a href="//twitter.com/webpraktikos" class="group">twitter.com/webpraktikos <span class="inline-block text-gray-550 print:text-black font-normal group-hover:text-gray-700 transition duration-100 ease-in">↗</span></a>
-        </li>
-        <li class="mt-1.5 leading-normal text-gray-700 text-md">1020 Wien, Austria</li>
-        <li class="mt-1.5 leading-normal text-gray-700 text-md">hi@webpraktikos.com</li>
-        <li class="mt-1.5 leading-normal text-gray-700 text-md">(+43) 0699 77 33 77 55</li>
-      </ul>
-    </section>
-  </div>
 
+        {{ with $.Site.Data.resume.basics.email }}
+          {{ $email := split $.Site.Data.resume.basics.email "/" }}
+          <li class="mt-1.5 leading-normal text-gray-700 text-md">
+            <i class="fa fa-envelope" style="font-size: 0.85rem;"></i> &nbsp;
+            <a href="javascript:void(0);" class="group cryptedmail" data-user="{{ index $email 2 }}" data-domain="{{ index $email 0 }}" data-tld="{{ index $email 1 }}" onclick="window.location.href = 'mailto:' + this.dataset.user + '@' + this.dataset.domain + '.' + this.dataset.tld"></a>
+          </li>
+        {{ end }}
+
+        {{ with $.Site.Data.resume.basics.phone }}
+          {{ $phonenumber := split . "/" }}
+          {{ $fullphonenumber := printf "%s/%s-%s" (index $phonenumber 1) (index $phonenumber 2) (index $phonenumber 0) }}
+          {{ $cleanphonenumber := printf "1%s%s%s" (index $phonenumber 1) (index $phonenumber 2) (index $phonenumber 0) }}
+          <li class="mt-1.5 leading-normal text-gray-700 text-md">
+            <i class="fa fa-phone"></i> &nbsp;
+            <a href="javascript:void(0);" class="group cryptednumber" data-areacode="{{ index $phonenumber 2 }}" data-exchangecode="{{ index $phonenumber 0 }}" data-linenumber="{{ index $phonenumber 1 }}" onclick="window.location.href = 'tel:1' + this.dataset.areacode + this.dataset.exchangecode + this.dataset.linenumber"></a>
+          </li>
+        {{ end }}
+
+        {{ with $.Site.Data.resume.basics.location }}
+          {{ if or .city .region }}
+            <li class="mt-1.5 leading-normal text-gray-700 text-md">
+              <i class="fa fa-location-arrow"></i> &nbsp;
+              {{ printf "%s, %s" .city .region }}
+            </li>
+          {{ end }}
+        {{ end }}
+
+        {{ with $.Site.Data.resume.basics.profiles }}
+
+          {{ range . }}
+            <li class="mt-1.5 leading-normal text-gray-700 text-md">
+              <i class="fa {{ .icon }}"></i> &nbsp;
+              <a href="{{ .url }}" class="group" target="_blank">
+                {{ .username | markdownify }}
+                <span class="inline-block text-gray-550 print:text-black font-normal group-hover:text-gray-700 transition duration-100 ease-in">↗</span>
+              </a>
+            </li>
+          {{ end }}
+
+        {{ end }}
+
+        {{ if not .Site.IsServer }} 
+          <li class="mt-1.5 leading-normal text-gray-700 text-md">
+            <i class="fa fa-file-pdf-o"></i> &nbsp;
+            <a href="/resumepdf" class="group" target="_blank">
+              Download &amp; Print PDF
+              <span class="inline-block text-gray-550 print:text-black font-normal group-hover:text-gray-700 transition duration-100 ease-in">↗</span>
+            </a>
+          </li>
+        {{ end }}
+
+      </ul>
+
+    </section>
+
+  </div>
 </section>

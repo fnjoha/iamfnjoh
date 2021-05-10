@@ -1,52 +1,53 @@
 <section class="mt-8 first:mt-0">
 
+  {{ $data := (sort $.Site.Data.resume.work "startDate" "desc") }}
+
   <!-- To keep in the same column -->
   <div class="break-inside-avoid">
-    <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">EXPERIENCE</h2>
-
-    <section class="mb-4.5 break-inside-avoid">
-      <header>
-        <h3 class="text-lg font-semibold text-gray-700 leading-snugish">WebPraktikos Inc.</h3>
-        <p class="leading-normal text-md text-gray-650">Jun 2018 – Present | Web Developer</p>
-      </header>
-      <p class="mt-2.1 text-md text-gray-700 leading-normal">Built doner pork chop &bull; Served salmon, cream soft cheese, and brisket &bull; Acted 55% pork chop &bull; Filled burgdoggen & frankfurter strip steak with 90% burger patties and broth</p>
-    </section>
-
+    <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal text-uppercase">Experiences</h2>
+      <!-- <section class="mb-4.5 break-inside-avoid">
+        <header>
+          <h3 class="text-lg font-semibold text-gray-700 leading-snugish"></h3>
+          <p class="leading-normal text-md text-gray-650"></p>
+        </header>
+        <p class="mt-2.1 text-md text-gray-700 leading-normal"></p>
+      </section> -->
   </div>
 
-  <section class="mb-4.5 break-inside-avoid">
-    <header>
-      <h3 class="text-lg font-semibold text-gray-700 leading-snugish">Mammoth GmbH</h3>
-      <p class="leading-normal text-md text-gray-650">Feb 2017 – Apr 2018 | Android Developer</p>
-    </header>
-    <ul class="">
+  {{ range first 3 $data }}
 
-      <li class="mt-2.1 text-md text-gray-700 leading-normal">
-        <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-        Cooked shrimps for 2 to 3 minutes per side, or until opaque; then, transfered to a serving dish with limon
-      </li>
-      <li class="mt-2.1 text-md text-gray-700 leading-normal">
-        <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-        Roasted a pig, turning frequently, until meat reached 160°F in the thickest part of the shoulder or thigh
-      </li>
-    </ul>
-  </section>
+    <section class="mb-4.5 break-inside-avoid">
 
-  <section class="mb-4.5 break-inside-avoid">
-    <header>
-      <h3 class="text-lg font-semibold text-gray-700 leading-snugish">Exquisite Systems d.o.o.</h3>
-      <p class="leading-normal text-md text-gray-650">May 2015 – Dec 2016 | Software QA Specialist</p>
-    </header>
-    <ul class="">
-      <li class="mt-2.1 text-md text-gray-700 leading-normal">
-        <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-        Made stockfish, which is unsalted fish, usully cod, dried by cold air and wind on wooden racks on the foreshore
-      </li>
-      <li class="mt-2.1 text-md text-gray-700 leading-normal">
-        <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-        Preserved meat without salt by removing fat, cutting it into very thin strips and drying it in the sun or by a fire.
-      </li>
-    </ul>
-  </section>
+      <header>
+        <h3 class="text-lg font-semibold text-gray-700 leading-snugish">{{ .company }}</h3>
+        <p class="leading-normal text-md text-gray-650">{{ .position }} &nbsp;&bull;&nbsp; {{ .location }} &nbsp;&bull;&nbsp; {{ if .startDate }}{{ dateFormat ($.Scratch.Get "dateformat") .startDate }} &ndash; {{ if .endDate }}{{ dateFormat ($.Scratch.Get "dateformat") .endDate }}{{ else }}Present{{ end }}{{ end }}</p>
+      </header>
+
+      {{ with .responsibilities }}
+        <ul>
+          {{ range . }}
+            <li class="mt-2.1 text-md text-gray-700 leading-normal">
+              <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
+              {{ . | markdownify }}
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+
+      {{ with .achievements }}
+      <h4 class="mt-4 mb-1.6 text-sm2 font-semibold text-gray-650 leading-snugish">Key Achievements</h4>
+        <ul>
+          {{ range . }}
+            <li class="mt-2.1 text-sm2 text-gray-700 leading-normal">
+              <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
+              {{ . | markdownify }}
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+
+    </section>
+
+  {{ end }}
 
 </section>

@@ -1,4 +1,4 @@
 +++
-title = "Resume"
+title = "Christian Mendoza - Resume"
 layout = "resume"
 +++

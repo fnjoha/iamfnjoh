@@ -3,3 +3,6 @@
 
 # Rewrite paths
 /ndoza/ /index.html 200
+
+# Redirect with 301
+/resumepdf        /assets/pdf/christian-mendoza-resume.pdf
