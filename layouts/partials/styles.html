@@ -1,15 +1,18 @@
 {{ $googleFontsCss := resources.Get "sass/google-fonts.scss" | toCSS (dict "targetPath" "assets/css/google-fonts.css" "outputStyle" "compressed") }}
 {{ $fontAwesomeCss := resources.Get "sass/font-awesome.css" | toCSS (dict "targetPath" "assets/css/font-awesome.css" "outputStyle" "compressed") }}
 {{ $mainCss := resources.Get "sass/main.scss" | toCSS (dict "targetPath" "assets/css/main.css" "outputStyle" "compressed") }}
+{{ $customCss := resources.Get "sass/custom.scss" | toCSS (dict "targetPath" "assets/css/custom.css" "outputStyle" "compressed") }}
 {{ $noScriptCss := resources.Get "sass/noscript.scss" | toCSS (dict "targetPath" "assets/css/noscript.css" "outputStyle" "compressed") }}
 
 {{ if eq hugo.Environment "development" }}
   <link rel="stylesheet" href="{{ $googleFontsCss.RelPermalink }}" />
   <link rel="stylesheet" href="{{ $fontAwesomeCss.RelPermalink }}" />
   <link rel="stylesheet" href="{{ $mainCss.RelPermalink }}" />
+  <link rel="stylesheet" href="{{ $customCss.RelPermalink }}" />
 {{ else }}
   <style>{{ $googleFontsCss.Content | safeCSS }}</style>
   <style>{{ $fontAwesomeCss.Content | safeCSS }}</style>
   <style>{{ $mainCss.Content | safeCSS }}</style>
+  <style>{{ $customCss.Content | safeCSS }}</style>
 {{ end }}
 <noscript><link rel="stylesheet" href="{{ $noScriptCss.RelPermalink }}" /></noscript>

@@ -1,10 +1,16 @@
 {{ $jquery := resources.Get "js/jquery.min.js" | resources.Minify }}
 {{ $skel := resources.Get "js/skel.min.js" | resources.Minify }}
 {{ $main := resources.Get "js/main.js" | resources.Minify }}
-{{ $js := slice $jquery $skel $main | resources.Concat "assets/js/bundle.js" }}
+{{ $pristine := resources.Get "js/pristine.js" | resources.Minify }}
+{{ $formvalidation := resources.Get "js/form-validation.js" | resources.Minify }}
+{{ $js := slice $jquery $skel $main $pristine $formvalidation | resources.Concat "assets/js/bundle.js" }}
 
 {{ if eq hugo.Environment "development" }}
-  <script src="{{ $js.RelPermalink }}"></script>
+  <script src="{{ $jquery.RelPermalink }}"></script>
+  <script src="{{ $skel.RelPermalink }}"></script>
+  <script src="{{ $main.RelPermalink }}"></script>
+  <script src="{{ $pristine.RelPermalink }}"></script>
+  <script src="{{ $formvalidation.RelPermalink }}"></script>
 {{ else }}
   <script>{{ $js.Content | safeJS }}</script>
 {{ end }}
