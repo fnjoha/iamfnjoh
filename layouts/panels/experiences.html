@@ -19,6 +19,12 @@
       {{ range $data }}
         <p><strong>{{ .studyType }} in {{ .area }}</strong><br><em>{{ .institution }}</em> {{ $content.separator | markdownify }} {{ .location }}{{ with .credentialUrl }} {{ $content.separator | markdownify }} <a href="{{ . }}" target="_blank">(see credential)</a>{{ end }}</p>
       {{ end }}
+
+      {{ with $content.resume }}
+        <ul class="actions">
+          <li><a href="{{ .url }}" class="button special color1 small icon {{ .icon }}" target="_blank" rel="nofollow">{{ .text | safeHTML }}</a></li>
+        </ul>
+      {{ end }}
     </div>
   </div>
   <div class="image filtered tinted" data-position="{{ $content.image.position }}">
