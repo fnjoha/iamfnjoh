@@ -9,18 +9,27 @@
         {{ with $.Site.Data.resume.basics.email }}
           {{ $email := split $.Site.Data.resume.basics.email "/" }}
           <li class="mt-1.5 leading-normal text-gray-700 text-md">
-            <i class="fa fa-envelope" style="font-size: 0.85rem;"></i> &nbsp;
-            <a href="javascript:void(0);" class="group cryptedmail" data-user="{{ index $email 2 }}" data-domain="{{ index $email 0 }}" data-tld="{{ index $email 1 }}" onclick="window.location.href = 'mailto:' + this.dataset.user + '@' + this.dataset.domain + '.' + this.dataset.tld"></a>
+            <i class="fas fa-at" style="font-size: 0.85rem;"></i> &nbsp;
+            {{ if $.Site.IsServer }}
+              {{ $email2 := printf "%s@%s.%s" (index $email 2) (index $email 0) (index $email 1) }}
+              <a href="mailto:{{ $email2 }}" class="group">{{ $email2 }}</a>
+            {{ else }}
+              <a href="javascript:void(0);" class="group cryptedmail" data-user="{{ index $email 2 }}" data-domain="{{ index $email 0 }}" data-tld="{{ index $email 1 }}" onclick="window.location.href = 'mailto:' + this.dataset.user + '@' + this.dataset.domain + '.' + this.dataset.tld"></a>
+            {{ end }}
           </li>
         {{ end }}
 
         {{ with $.Site.Data.resume.basics.phone }}
           {{ $phonenumber := split . "/" }}
-          {{ $fullphonenumber := printf "%s/%s-%s" (index $phonenumber 1) (index $phonenumber 2) (index $phonenumber 0) }}
-          {{ $cleanphonenumber := printf "1%s%s%s" (index $phonenumber 1) (index $phonenumber 2) (index $phonenumber 0) }}
           <li class="mt-1.5 leading-normal text-gray-700 text-md">
-            <i class="fa fa-phone"></i> &nbsp;
-            <a href="javascript:void(0);" class="group cryptednumber" data-areacode="{{ index $phonenumber 2 }}" data-exchangecode="{{ index $phonenumber 0 }}" data-linenumber="{{ index $phonenumber 1 }}" onclick="window.location.href = 'tel:1' + this.dataset.areacode + this.dataset.exchangecode + this.dataset.linenumber"></a>
+            <i class="fas fa-mobile-alt"></i> &nbsp;&nbsp;
+            {{ if $.Site.IsServer }}
+              {{ $fullphonenumber := printf "%s/%s-%s" (index $phonenumber 2) (index $phonenumber 0) (index $phonenumber 1) }}
+              {{ $cleanphonenumber := printf "1%s%s%s" (index $phonenumber 2) (index $phonenumber 0) (index $phonenumber 1) }}
+              <a href="tel:{{ $cleanphonenumber }}" class="group">{{ $fullphonenumber }}</a>
+            {{ else }}
+              <a href="javascript:void(0);" class="group" data-areacode="{{ index $phonenumber 2 }}" data-exchangecode="{{ index $phonenumber 0 }}" data-linenumber="{{ index $phonenumber 1 }}" onclick="window.location.href = 'tel:1' + this.dataset.areacode + this.dataset.exchangecode + this.dataset.linenumber"></a>
+            {{ end }}
           </li>
         {{ end }}
 
@@ -37,7 +46,7 @@
 
           {{ range . }}
             <li class="mt-1.5 leading-normal text-gray-700 text-md">
-              <i class="fa {{ .icon }}"></i> &nbsp;
+              <i class="{{ .icon }}"></i> &nbsp;{{ if eq .network "Kaggle" }}&nbsp;{{ end }}
               <a href="{{ .url }}" class="group" target="_blank">
                 {{ .username | markdownify }}
                 <span class="inline-block text-gray-550 print:text-black font-normal group-hover:text-gray-700 transition duration-100 ease-in">↗</span>
@@ -49,7 +58,7 @@
 
         {{ if not .Site.IsServer }} 
           <li class="mt-1.5 leading-normal text-gray-700 text-md">
-            <i class="fa fa-file-pdf-o"></i> &nbsp;
+            <i class="fas fa-file-pdf"></i> &nbsp;&nbsp;
             <a href="/resumepdf" class="group" target="_blank">
               Download &amp; Print PDF
               <span class="inline-block text-gray-550 print:text-black font-normal group-hover:text-gray-700 transition duration-100 ease-in">↗</span>

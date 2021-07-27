@@ -1,0 +1,39 @@
+{{ $dateformat := "2006" }}
+{{ $delimiter := " &nbsp;&#124;&nbsp; " }}
+
+{{ $dates := slice "" }}
+{{ $startYear := dateFormat $dateformat .startDate }}
+
+{{ if not .endDate }}
+  {{ $dates = $dates | append (printf "Since %s" $startYear) }}
+{{ else }}
+  {{ $endYear := dateFormat $dateformat .endDate }}
+  {{ if eq $startYear $endYear }}
+    {{ $dates = $dates | append $endYear }}
+  {{ else }}
+    {{ $dates = $dates | append (slice $startYear " &ndash; " $endYear) }}
+  {{ end }}
+{{ end }}
+{{ $dates = delimit $dates "" }}
+
+{{ $keywords := delimit .keywords ", " }}
+
+<section class="mb-4.5 break-inside-avoid">
+  <header>
+    <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+      {{ if .url }}
+      <a href="{{ .url }}" class="group">{{ .name }}
+        <span class="inline-block text-gray-550 print:text-black font-normal group-hover:text-gray-700 transition duration-100 ease-in">↗</span>
+      </a>
+      {{ else }}
+        {{ .name }}
+      {{ end }}
+    </h3>
+    <p class="leading-normal text-md text-gray-650">
+      {{ delimit (slice $dates $keywords) $delimiter }}
+    </p>
+  </header>
+  {{ with .description }}
+    <p class="mt-2.1 text-md text-gray-700 leading-normal">{{ . | safeHTML }}</p>
+  {{ end }}
+</section>

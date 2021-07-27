@@ -1,53 +1,17 @@
-<section class="mt-8 first:mt-0">
+{{ $data := (sort $.Site.Data.resume.work "startDate" "desc") }}
 
-  {{ $data := (sort $.Site.Data.resume.work "startDate" "desc") }}
+<section class="mt-8 first:mt-0">
 
   <!-- To keep in the same column -->
   <div class="break-inside-avoid">
     <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal text-uppercase">Experiences</h2>
-      <!-- <section class="mb-4.5 break-inside-avoid">
-        <header>
-          <h3 class="text-lg font-semibold text-gray-700 leading-snugish"></h3>
-          <p class="leading-normal text-md text-gray-650"></p>
-        </header>
-        <p class="mt-2.1 text-md text-gray-700 leading-normal"></p>
-      </section> -->
+    {{ range first 1 $data }}
+      {{ partial "resume/experiences-details" . }}
+    {{ end }}
   </div>
 
-  {{ range first 3 $data }}
-
-    <section class="mb-4.5 break-inside-avoid">
-
-      <header>
-        <h3 class="text-lg font-semibold text-gray-700 leading-snugish">{{ .company }}</h3>
-        <p class="leading-normal text-md text-gray-650">{{ .position }} &nbsp;&bull;&nbsp; {{ .location }} &nbsp;&bull;&nbsp; {{ if .startDate }}{{ dateFormat ($.Scratch.Get "dateformat") .startDate }} &ndash; {{ if .endDate }}{{ dateFormat ($.Scratch.Get "dateformat") .endDate }}{{ else }}Present{{ end }}{{ end }}</p>
-      </header>
-
-      {{ with .responsibilities }}
-        <ul>
-          {{ range . }}
-            <li class="mt-2.1 text-md text-gray-700 leading-normal">
-              <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-              {{ . | markdownify }}
-            </li>
-          {{ end }}
-        </ul>
-      {{ end }}
-
-      {{ with .achievements }}
-      <h4 class="mt-4 mb-1.6 text-sm2 font-semibold text-gray-650 leading-snugish">Key Achievements</h4>
-        <ul>
-          {{ range . }}
-            <li class="mt-2.1 text-sm2 text-gray-700 leading-normal">
-              <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-              {{ . | markdownify }}
-            </li>
-          {{ end }}
-        </ul>
-      {{ end }}
-
-    </section>
-
+  {{ range after 1 (first 3 $data) }}
+    {{ partial "resume/experiences-details" . }}
   {{ end }}
 
 </section>
