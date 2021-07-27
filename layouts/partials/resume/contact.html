@@ -14,7 +14,7 @@
               {{ $email2 := printf "%s@%s.%s" (index $email 2) (index $email 0) (index $email 1) }}
               <a href="mailto:{{ $email2 }}" class="group">{{ $email2 }}</a>
             {{ else }}
-              <a href="javascript:void(0);" class="group cryptedmail" data-user="{{ index $email 2 }}" data-domain="{{ index $email 0 }}" data-tld="{{ index $email 1 }}" onclick="window.location.href = 'mailto:' + this.dataset.user + '@' + this.dataset.domain + '.' + this.dataset.tld"></a>
+              <a href="javascript:void(0);" class="group cryptedmail" data-domain="{{ index $email 0 }}" data-tld="{{ index $email 1 }}" data-user="{{ index $email 2 }}" onclick="window.location.href = 'mailto:' + this.dataset.user + '@' + this.dataset.domain + '.' + this.dataset.tld"></a>
             {{ end }}
           </li>
         {{ end }}
@@ -28,7 +28,7 @@
               {{ $cleanphonenumber := printf "1%s%s%s" (index $phonenumber 2) (index $phonenumber 0) (index $phonenumber 1) }}
               <a href="tel:{{ $cleanphonenumber }}" class="group">{{ $fullphonenumber }}</a>
             {{ else }}
-              <a href="javascript:void(0);" class="group" data-areacode="{{ index $phonenumber 2 }}" data-exchangecode="{{ index $phonenumber 0 }}" data-linenumber="{{ index $phonenumber 1 }}" onclick="window.location.href = 'tel:1' + this.dataset.areacode + this.dataset.exchangecode + this.dataset.linenumber"></a>
+              <a href="javascript:void(0);" class="group cryptednumber" data-exchangecode="{{ index $phonenumber 0 }}" data-linenumber="{{ index $phonenumber 1 }}" data-areacode="{{ index $phonenumber 2 }}" onclick="window.location.href = 'tel:1' + this.dataset.areacode + this.dataset.exchangecode + this.dataset.linenumber"></a>
             {{ end }}
           </li>
         {{ end }}
