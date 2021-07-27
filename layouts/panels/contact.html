@@ -38,11 +38,11 @@
         </ul>
       </form>
     </div>
-    <div class="span-1-75">
+    <div class="span-2">
       {{ if $social }}
         <ul class="contact-icons color1">
           {{ range $social }}
-            <li class="icon {{ .icon }}"><a href="{{ htmlUnescape .url }}">{{ htmlUnescape .label }}</a></li>
+            <li class="icon {{ .icon }}"><a href="{{ htmlUnescape .url }}" target="_blank">{{ htmlUnescape .label }}</a></li>
           {{ end }}
 
           {{ with $.Site.Data.resume.basics.email }}

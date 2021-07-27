@@ -1,6 +1,7 @@
 {{ $content := $.Site.Data.content.panel.experiences }}
 {{ $resume := $.Site.Data.resume }}
 {{ $dateformat := "Jan 2006" }}
+{{ $delimiter := " &nbsp;&bull;&nbsp; " }}
 
 <section class="panel spotlight large">
   <div class="inner columns divided">
@@ -9,15 +10,22 @@
       <h3>Work</h3>
       {{ $data := (sort $resume.work "startDate" "desc") }}
       {{ range first 3 $data }}
-        <p><strong>{{ .position }} {{ $content.separator | markdownify }} {{ dateFormat $dateformat .startDate }} &ndash; {{ if .endDate }}{{ dateFormat $dateformat .endDate }}{{ else }}Present{{ end }}</strong><br><em>{{ .company }}</em> {{ $content.separator | markdownify }} {{ .location }}</p>
+        {{ $dates := slice (dateFormat $dateformat .startDate) }}
+        {{ if .endDate }}
+          {{ $dates = $dates | append (dateFormat $dateformat .endDate) }}
+        {{ else }}
+          {{ $dates = $dates | append "Present" }}
+        {{ end }}
+        {{ $dates = delimit $dates " &ndash; " }}
+        <p><strong>{{ .position }}</strong><br>{{ delimit (slice .company .location $dates) $delimiter }}</p>
       {{ end }}
     </div>
 
     <div class="span-4">
       <h3>Education</h3>
       {{ $data := (sort $resume.education "endDate" "desc") }}
-      {{ range $data }}
-        <p><strong>{{ .studyType }} in {{ .area }}</strong><br><em>{{ .institution }}</em> {{ $content.separator | markdownify }} {{ .location }}{{ with .credentialUrl }} {{ $content.separator | markdownify }} <a href="{{ . }}" target="_blank">(see credential)</a>{{ end }}</p>
+      {{ range where $data "show" true }}
+        <p><strong>{{ .studyType }} in {{ .area }}</strong><br>{{ delimit (slice .institution .location) $delimiter }}</p>
       {{ end }}
 
       {{ with $content.resume }}

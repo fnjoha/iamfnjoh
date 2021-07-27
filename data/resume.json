@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Christian Mendoza",
-    "label": "Technical Support Engineer",
+    "label": "Data Analyst",
     "picture": "/assets/images/christian-headshot.jpg",
     "email": "iamchristian/me/christian",
     "phone": "535/8132/646",
@@ -20,19 +20,31 @@
         "network": "LinkedIn",
         "username": "linkedin.com/in/christianmendoza",
         "url": "https://linkedin.com/in/christianmendoza",
-        "icon": "fa-linkedin"
+        "icon": "fab fa-linkedin-in"
       },
       {
         "network": "GitHub",
         "username": "github.com/christianmendoza",
         "url": "https://github.com/christianmendoza",
-        "icon": "fa-github"
+        "icon": "fab fa-github"
+      },
+      {
+        "network": "Kaggle",
+        "username": "kaggle.com/iamchristianmendoza",
+        "url": "https://www.kaggle.com/iamchristianmendoza",
+        "icon": "fab fa-kaggle"
+      },
+      {
+        "network": "Tableau Public",
+        "username": "tableau.com/profile/christian.mendoza",
+        "url": "https://public.tableau.com/profile/christian.mendoza",
+        "icon": "fas fa-chart-bar"
       },
       {
         "network": "Website",
         "username": "iamchristian.me/ndoza",
         "url": "https://iamchristian.me",
-        "icon": "fa-globe"
+        "icon": "fas fa-globe"
       }
     ]
   },
@@ -233,9 +245,12 @@
       "studyType": "Bachelor of Arts",
       "startDate": "",
       "endDate": "",
+      "summary": [
+      ],
       "gpa": "",
       "courses": [
-      ]
+      ],
+      "show": true
     },
     {
       "institution": "General Assembly",
@@ -252,25 +267,50 @@
       ],
       "gpa": "",
       "courses": [
-      ]
+      ],
+      "show": true
     },
     {
-      "institution": "Coursera",
-      "location": "Online",
-      "website": "https://www.coursera.org/",
+      "institution": "UC San Diego",
+      "location": "Coursera",
+      "website": "https://www.coursera.org/learn/big-data-introduction",
       "area": "Introduction to Big Data",
       "studyType": "Certificate",
       "startDate": "",
       "endDate": "2020-07-31",
       "summary": [
-        "",
-        "",
-        ""
       ],
       "gpa": "",
       "courses": [
       ],
-      "credentialUrl": "https://www.coursera.org/account/accomplishments/certificate/HFGJRDNF9DDG"
+      "credentialId": "HFGJRDNF9DDG",
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/certificate/HFGJRDNF9DDG",
+      "show": true
+    },
+    {
+      "institution": "Google",
+      "location": "Coursera",
+      "website": "https://www.coursera.org/professional-certificates/google-data-analytics",
+      "area": "Data Analytics",
+      "studyType": "Certificate",
+      "startDate": "",
+      "endDate": "2021-07-25",
+      "summary": [
+      ],
+      "gpa": "",
+      "courses": [
+        "Foundations: Data, Data, Everywhere",
+        "Ask Questions to Make Data-Driven Decisions",
+        "Prepare Data for Exploration",
+        "Process Data from Dirty to Clean",
+        "Analyze Data to Answer Questions",
+        "Share Data Through the Art of Visualization",
+        "Data Analysis with R Programming",
+        "Google Data Analytics Capstone: Complete a Case Study"
+      ],
+      "credentialId": "4KB4ZDVHL24S",
+      "credentialUrl": "https://www.credly.com/badges/f0ceb695-d520-4d81-b821-d1ab7d20315f/public_url",
+      "show": true
     }
   ],
   "awards": [
@@ -292,10 +332,42 @@
   ],
   "skills": [
     {
-      "name": "",
+      "name": "Data Analysis",
+      "level": "Intermediate",
       "keywords": [
-      ],
-      "area": ""
+        "SQL",
+        "R",
+        "tidyverse",
+        "Python",
+        "pandas",
+        "NumPy",
+        "Matplotlib"
+      ]
+    },
+    {
+      "name": "Web Development",
+      "level": "Intermediate",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "SCSS",
+        "JavaScript",
+        "JSON",
+        "APIs"
+      ]
+    },
+    {
+      "name": "Tools &amp; Technologies",
+      "level": "Intermediate",
+      "keywords": [
+        "RStudio",
+        "Jupyter",
+        "Tableau",
+        "Kibana",
+        "Datadog",
+        "Git",
+        "Jira"
+      ]
     }
   ],
   "languages": [
@@ -315,6 +387,17 @@
     {
       "name": "",
       "reference": ""
+    }
+  ],
+  "projects": [
+    {
+      "name": "",
+      "url": "",
+      "description": "",
+      "startDate": "",
+      "endDate": "",
+      "keywords": [
+      ]
     }
   ]
 }

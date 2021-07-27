@@ -1,0 +1,16 @@
+{{ $studyarea := printf "%s in %s" .studyType .area }}
+{{ $delimiter := " &nbsp;&bull;&nbsp; " }}
+
+<section class="mb-4.5 break-inside-avoid">
+  <header>
+    <h3 class="text-lg font-semibold text-gray-700 leading-snugish">{{ .institution }}</h3>
+    <p class="leading-normal text-md text-gray-650">{{ delimit (slice $studyarea .location) $delimiter }}</p>
+  </header>
+  <!-- {{ if .courses }}
+    {{ $len := len .courses }}
+    {{ $last := sub $len 1 }}
+      <p class="leading-normal text-sm2 text-gray-650">
+        {{ range $index, $item := .courses }}{{ if $index }}, {{ end }}{{ if eq $index $last }}and {{ end }}{{ printf "(%d) %s" (add $index 1) $item }}{{ end }}
+      </p>
+  {{ end }} -->
+</section>

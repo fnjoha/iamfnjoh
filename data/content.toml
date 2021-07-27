@@ -9,7 +9,7 @@
 # ABOUT
 [panel.about]
   title = "About"
-  text = "Growing up with a deep interest in computers, technology, and the web gave Christian the drive to study computer science and apply his programming skills and knowledge to website creation. An array of work experiences and roles carved his path and ultimately led him to pursue a career as a technical support engineer. Currently Christian enjoys building small personal websites and hacking together tools to increase productivity."
+  text = "Growing up with a deep interest in computers, technology, and the web gave Christian the drive to study computer science and apply his programming skills and knowledge to website creation. An array of work experiences and roles carved his path and ultimately led him to pursue a career as a data analyst. Currently in his spare time, Christian enjoys building small personal websites and hacking together tools to increase productivity."
   [panel.about.image]
     src = "/assets/images/museum-of-the-moving-image.jpg"
     position = "right"
@@ -55,7 +55,6 @@
 # EXPERIENCES
 [panel.experiences]
   title = "Experiences"
-  separator = "&nbsp;&bull;&nbsp;"
   [panel.experiences.image]
     src = "/assets/images/malibu.jpg"
     position = "right"
@@ -81,3 +80,13 @@
   label = "github.com/christianmendoza"
   icon = "fa-github"
   url = "https://github.com/christianmendoza"
+
+[[social]]
+  label = "kaggle.com/iamchristianmendoza"
+  icon = "fa-table"
+  url = "https://www.kaggle.com/iamchristianmendoza"  
+
+[[social]]
+  label = "tableau.com/profile/christian.mendoza"
+  icon = "fa-bar-chart"
+  url = "https://public.tableau.com/profile/christian.mendoza"
