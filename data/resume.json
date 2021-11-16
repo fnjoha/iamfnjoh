@@ -29,12 +29,6 @@
         "icon": "fab fa-github"
       },
       {
-        "network": "Kaggle",
-        "username": "kaggle.com/iamchristianmendoza",
-        "url": "https://www.kaggle.com/iamchristianmendoza",
-        "icon": "fab fa-kaggle"
-      },
-      {
         "network": "Tableau Public",
         "username": "tableau.com/profile/christian.mendoza",
         "url": "https://public.tableau.com/profile/christian.mendoza",
