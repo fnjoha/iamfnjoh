@@ -82,11 +82,6 @@
   url = "https://github.com/christianmendoza"
 
 [[social]]
-  label = "kaggle.com/iamchristianmendoza"
-  icon = "fa-table"
-  url = "https://www.kaggle.com/iamchristianmendoza"  
-
-[[social]]
   label = "tableau.com/profile/christian.mendoza"
   icon = "fa-bar-chart"
   url = "https://public.tableau.com/profile/christian.mendoza"
