@@ -29,6 +29,12 @@
         "icon": "fab fa-github"
       },
       {
+        "network": "Kaggle",
+        "username": "kaggle.com/iamchristianmendoza",
+        "url": "https://www.kaggle.com/iamchristianmendoza",
+        "icon": "fab fa-kaggle"
+      },
+      {
         "network": "Tableau Public",
         "username": "tableau.com/profile/christian.mendoza",
         "url": "https://public.tableau.com/profile/christian.mendoza",
@@ -50,6 +56,7 @@
       "website": "https://www.kaptest.com",
       "startDate": "2012-07-01",
       "endDate": "2014-04-01",
+      "show": false,
       "summary": "",
       "responsibilities": [
         "Managed content through the e-commerce website",
@@ -79,6 +86,7 @@
       "website": "https://www.kaptest.com",
       "startDate": "2014-04-01",
       "endDate": "2014-12-01",
+      "show": false,
       "summary": "",
       "responsibilities": [
         "Managed a team of web producers as part of a national marketing team",
@@ -109,6 +117,7 @@
       "website": "https://www.scrollmotion.com",
       "startDate": "2015-01-01",
       "endDate": "2015-09-01",
+      "show": false,
       "summary": "",
       "responsibilities": [
         "Implemented application features, both consumer-facing and product-based, using HTML, JavaScript, JSON, and the enterprise platform",
@@ -135,6 +144,7 @@
       "website": "https://www.wired.com",
       "startDate": "2015-09-01",
       "endDate": "2016-09-01",
+      "show": true,
       "summary": "",
       "responsibilities": [
         "Developed landing pages, microsites, ad units, and other creative ad product solutions for marketing partners tailored to WIRED.com readers",
@@ -163,6 +173,7 @@
       "website": "https://camcreationlabs.com",
       "startDate": "2017-02-01",
       "endDate": "2019-05-06",
+      "show": false,
       "summary": "",
       "responsibilities": [
         "Built marketing funnel pages for chiropractors & podiatrists to increase overall revenue",
@@ -200,19 +211,40 @@
       "location": "New York, NY",
       "website": "https://www.ogury.com/",
       "startDate": "2019-05-06",
-      "endDate": "",
+      "endDate": "2021-01-21",
+      "show": true,
       "summary": "Technical Support Engineer responsible for service requests levels 1, 2 and 3, escalations and communicating with all internal teams.",
       "responsibilities": [
-        "Supporting business and operation teams with technical tasks, investigating and solving their issues, and providing additional help where needed",
-        "Communicating with development team and escalating issues as appropriate",
-        "Testing and troubleshooting the platform, applications, and services",
-        "Explaining specific behaviors and building custom reports by investigating and exploring data",
-        "Contributing process and technical documentation to the knowledge base"
+        "Supported business and operation teams with technical tasks, investigated and solved their issues, and provided additional help where needed",
+        "Communicated with the development team and escalated issues as appropriate",
+        "Tested and troubleshooted the platform, applications, and services",
+        "Explained specific behaviors and built custom reports by investigating and exploring data",
+        "Contributed process and technical documentation to the knowledge base"
       ],
       "achievements": [
         "Ramped up quickly, learning the ecosystem and necessary tools & services to carry out tasks",
         "Wrote shell and SQL scripts to aid in specific processes that were performed manually, enabling the team to complete tasks more faster, easier, and efficiently",
         "Utilized front end knowledge to integrate and troubleshoot ad formats more effectively"
+      ],
+      "technologies": [
+      ]
+    },
+    {
+      "company": "Truepill",
+      "position": "Support Engineer, Core Infrastructure & API",
+      "location": "Austin, TX",
+      "website": "https://truepill.com/",
+      "startDate": "2021-01-31",
+      "endDate": "",
+      "show": true,
+      "summary": "Truepill is a digital healthcare infrastructure for more accessible and affordable care. A full-cycle healthcare product, Truepill enables patients to virtually visit doctors, receive at-home tests and prescriptions, and monitor any medications or visits through an app.",
+      "responsibilities": [
+        "Support existing products and features across multiple technologies",
+        "Distill high-level user feedback into the product support backlog",
+        "Critically think through user journey and advocate for product enhancements and optimizations",
+        "Recommend customer impacting enhancements for existing software applications, and distributed services that support high-scale web applications"
+      ],
+      "achievements": [
       ],
       "technologies": [
       ]
@@ -335,7 +367,10 @@
         "Python",
         "pandas",
         "NumPy",
-        "Matplotlib"
+        "Matplotlib",
+        "Seaborn",
+        "Dash",
+        "Plotly"
       ]
     },
     {
@@ -344,10 +379,17 @@
       "keywords": [
         "HTML",
         "CSS",
-        "SCSS",
         "JavaScript",
         "JSON",
-        "APIs"
+        "APIs",
+        "React",
+        "SVG",  
+        "D3", 
+        "RAWGraphs",  
+        "Chart.js", 
+        "Highcharts", 
+        "Vega-Lite",  
+        "dimplejs"
       ]
     },
     {
@@ -357,10 +399,10 @@
         "RStudio",
         "Jupyter",
         "Tableau",
-        "Kibana",
-        "Datadog",
-        "Git",
-        "Jira"
+        "Power BI",
+        "Looker",
+        "Spreadsheets",
+        "Git"
       ]
     }
   ],

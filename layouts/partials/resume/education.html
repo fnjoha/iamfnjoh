@@ -5,7 +5,7 @@
   <!-- To keep in the same column -->
   <div class="break-inside-avoid">
     <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal text-uppercase">Education</h2>
-    {{ range first 1 $data }}
+    {{ range first 1 (where $data "show" true) }}
       {{ partial "resume/education-details" . }}
     {{ end }}
   </div>
