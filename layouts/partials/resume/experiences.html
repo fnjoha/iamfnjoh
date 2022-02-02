@@ -10,7 +10,7 @@
     {{ end }}
   </div>
 
-  {{ range after 1 (first 3 $data) }}
+  {{ range after 1 (first 3 (where $data "show" true)) }}
     {{ partial "resume/experiences-details" . }}
   {{ end }}
 
