@@ -50,67 +50,6 @@
   },
   "work": [
     {
-      "company": "Kaplan Test Prep",
-      "position": "Web Producer",
-      "location": "New York, NY",
-      "website": "https://www.kaptest.com",
-      "startDate": "2012-07-01",
-      "endDate": "2014-04-01",
-      "show": false,
-      "summary": "",
-      "responsibilities": [
-        "Managed content through the e-commerce website",
-        "Executed web campaigns in partnership with business units as part of a national marketing team",
-        "Suggested and created A/B and multivariate experiments to gain insights on increasing conversions and overall revenue",
-        "Built and maintained community blogs, Facebook pages and other web properties"
-      ],
-      "achievements": [
-        "Played a key role in overall content migration during a Website Redesign"
-      ],
-      "technologies": [
-        "HTML/CSS",
-        "JavaScript",
-        "jQuery",
-        "Alfresco CMS",
-        "Jira",
-        "Google Analytics",
-        "WordPress",
-        "Adobe Photoshop",
-        "Salesforce"
-      ]
-    },
-    {
-      "company": "Kaplan Test Prep",
-      "position": "Manager, Web Production / Front End Development",
-      "location": "New York, NY",
-      "website": "https://www.kaptest.com",
-      "startDate": "2014-04-01",
-      "endDate": "2014-12-01",
-      "show": false,
-      "summary": "",
-      "responsibilities": [
-        "Managed a team of web producers as part of a national marketing team",
-        "Utilized web analytics to measure performance and recommend iterative improvements",
-        "Collaborated with cross-functional teams consisting of graphic designers, traffic coordinators, project managers, and engineers",
-        "Participated in the technical team's daily scrums and biweekly sprint planning meetings, ensuring the marketing team's project requests were prioritized and advancing accordingly"
-      ],
-      "achievements": [
-        "Promoted for becoming team lead and demonstrating leadership skills",
-        "Headed efforts to migrate the marketing project development and delivery process to Agile Kanban methodology"
-      ],
-      "technologies": [
-        "HTML/CSS",
-        "JavaScript",
-        "jQuery",
-        "Alfresco CMS",
-        "Jira",
-        "Google Analytics",
-        "WordPress",
-        "Adobe Photoshop",
-        "Salesforce"
-      ]
-    },
-    {
       "company": "ScrollMotion",
       "position": "Associate Front End Developer",
       "location": "New York, NY",
